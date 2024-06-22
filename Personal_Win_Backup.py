@@ -3,8 +3,8 @@
 import subprocess
 
 def backup_data(src, dest):
-    src = "C:/Users/Micha/OneDrive/Documents/Google Automation/TSandDebug"
-    dest = "D:\PyTrblSht_Backup"
+    src = "C:\\Users\\Micha\\OneDrive\\Documents\\Google Automation\\TSandDebug"
+    dest = "D:\\PyTrblSht_Backup"
     
     try:
         result = subprocess.run(["xcopy",src,dest,"/AC"], check=True, capture_output=True, text=True, shell=True)
@@ -17,4 +17,4 @@ def backup_data(src, dest):
         print('stderr:', e.stderr)
 
 if __name__ == "__main__":
-    backup_data("C:/Users/Micha/OneDrive/Documents/Google Automation/TSandDebug", "D:\PyTrblSht_Backup")
+    backup_data("C:\\Users\\Micha\\OneDrive\\Documents\\Google Automation\\TSandDebug", "D:\\PyTrblSht_Backup")
